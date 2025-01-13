@@ -29,6 +29,7 @@
     position: sticky;
     top: 0;
     /*background-color: #EE9B00;*/
+    background-color: #EFE8D4;
     padding: 10px;
     display: flex;
     gap: 10px;
@@ -39,7 +40,7 @@
   .sticky-nav button {
     padding: 10px 20px;
     border: none;
-    background: #f4f4f4;
+    background-color: #EE9B00;
     cursor: pointer;
   }
   
