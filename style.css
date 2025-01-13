@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "League Spartan";
+  }
+  
+  body {
+    
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #EFE8D4;
+  }
+
+#etoile{
+    width: 6vw;
+}
+  
+  header {
+    text-align: center;
+    padding: 20px;
+    background-color: #CA6702;
+;
+  }
+  
+  .sticky-nav {
+    z-index: 2;
+    position: sticky;
+    top: 0;
+    background-color: #EE9B00;
+    padding: 10px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .sticky-nav button {
+    padding: 10px 20px;
+    border: none;
+    background: #f4f4f4;
+    cursor: pointer;
+  }
+  
+  .sticky-nav button:hover {
+    background: #ddd;
+  }
+  
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    padding: 20px;
+  }
+  
+  .photo img {
+    width: 100%;
+    border-radius: 5px;
+    transition: transform 0.3s;
+  }
+  
+  .photo img:hover {
+    transform: scale(1.05);
+  }
+  
+  footer {
+    text-align: center;
+    padding: 10px;
+    background: #CA6702;
+    margin-top: 20px;
+  }
+
+.photo {
+    display: block; /* Par défaut, toutes les photos sont visibles */
+}
+  
+.photo.hidden {
+    display: none; /* Cache les photos non sélectionnées */
+}
+
+/* Style pour les boutons de filtre */
+button.category-filter {
+    margin: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    color: ;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  button.category-filter:hover {
+    background-color: #CA6702;
+  }
+  
+  button#showAll {
+    margin-left: 10px;
+  }
+  
+ /* Container de la galerie */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Max 5 images par ligne */
+    gap: 10px;
+    padding: 20px;
+  }
+  
+  /* Les cartes */
+  .card {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1; /* Carré */
+    cursor: pointer;
+    transform: scale(1);
+    transition: transform 0.3s;
+    display: block;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none; /* Masqué par défaut */
+  }
+  
+  .card .back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ccc; /* Apparence de la carte cachée */
+    border-radius: 5px;
+  }
+  
+  /* Limitation à 5 images par ligne */
+  @media screen and (min-width: 600px) {
+    .gallery {
+      grid-template-columns: repeat(5, 1fr); /* Maximum de 5 images par ligne */
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .gallery {
+      grid-template-columns: repeat(2, 1fr); /* Moins de 5 images sur petit écran */
+    }
+  }
+  
