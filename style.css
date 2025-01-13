@@ -20,7 +20,7 @@
   header {
     text-align: center;
     padding: 20px;
-    background-color: #CA6702;
+    /*background-color: #CA6702;*/
 ;
   }
   
@@ -28,7 +28,7 @@
     z-index: 2;
     position: sticky;
     top: 0;
-    background-color: #EE9B00;
+    /*background-color: #EE9B00;*/
     padding: 10px;
     display: flex;
     gap: 10px;
