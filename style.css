@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "League Spartan";
+    
 }
   
 body {
@@ -43,8 +44,10 @@ header {
 .sticky-nav button {
     padding: 10px 20px;
     border: none;
+    color: #EFE8D4;
     background-color: #CA6702;
     cursor: pointer;
+    
 }
   
 .sticky-nav button:hover {
@@ -146,6 +149,10 @@ button#showAll {
 @media screen and (max-width: 600px) {
     .gallery {
       grid-template-columns: repeat(2, 1fr); 
+    }
+    .sticky-nav {
+        flex-wrap: wrap;
+        overflow-x: hidden;
     }
 }
   
