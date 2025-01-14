@@ -14,7 +14,6 @@ body {
 
 #showAll {
     border: none;
-    
     border-radius: 8px;
 }
 
@@ -29,6 +28,7 @@ header {
 ;}
   
 .sticky-nav {
+    top: 0%;
     z-index: 2;
     position: sticky;
     /*background-color: #EE9B00;*/
