@@ -57,7 +57,7 @@ header {
   
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 10px;
     padding: 20px;
 }
@@ -70,6 +70,7 @@ header {
   
 .photo img:hover {
     transform: scale(1.05);
+    border-radius: 10%;
 }
   
 footer {
@@ -81,6 +82,7 @@ footer {
 
 .photo {
     display: block; 
+    border-radius: 10%;
 }
   
 .photo.hidden {
@@ -106,6 +108,17 @@ button#showAll {
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Max 5 images par ligne */
     gap: 10px;
     padding: 20px;
+    width: 100%;
+    
+}
+
+#rangement {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 80%;
+    margin: 0% auto;
 }
   
 
@@ -117,6 +130,7 @@ button#showAll {
     transform: scale(1);
     transition: transform 0.3s;
     display: block;
+    border-radius: 10%;
 }
   
 .card:hover {
@@ -128,6 +142,7 @@ button#showAll {
     height: 100%;
     object-fit: cover;
     display: none; 
+    border-radius: 16px;
 }
   
 .card .back {
@@ -146,7 +161,16 @@ button#showAll {
       grid-template-columns: repeat(4, 1fr); 
     }
 }
-  
+ 
+@media screen and (min-width: 1980px) {
+    .gallery {
+      grid-template-columns: repeat(4, 1fr); 
+    }
+    #rangement {
+        width: 60%;
+    }
+}
+
 @media screen and (max-width: 600px) {
     .gallery {
       grid-template-columns: repeat(2, 1fr); 
@@ -154,6 +178,9 @@ button#showAll {
     .sticky-nav {
         flex-wrap: wrap;
         overflow-x: hidden;
+    }
+    #rangement {
+        width: 100%;
     }
 }
   
