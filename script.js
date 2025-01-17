@@ -1,5 +1,5 @@
 
- function shuffleCards() {
+ function shuffleCards() { //Mélanger les cartes (j'essaye de faire programme en anglais)
     const gallery = document.querySelector('.gallery');
     const cards = Array.from(gallery.children);
     const shuffledCards = cards.sort(() => Math.random() - 0.5);
@@ -26,10 +26,10 @@ function resetGame() {
   }
 
  
-function checkGameOver() {
+function checkGameOver() { //Petite fonction chat GPT (mais elle marche pas)
     const matchedCards = document.querySelectorAll('.card.matched');
     if (matchedCards.length === cards.length) {
-      window.alert("Hello world!");
+      window.alert("C'est gagné");
     }
     }
 
@@ -37,7 +37,7 @@ function checkGameOver() {
   cards.forEach(card => {
     card.addEventListener('click', () => {
       if (lockBoard || card === firstCard || card.classList.contains('matched')) return;
-
+      //surement la ligne la plus compliquer à trouver
       card.classList.add('flipped');
       card.querySelector('img').style.display = 'block';
       card.querySelector('.back').style.display = 'none';
@@ -59,7 +59,7 @@ function checkGameOver() {
         setTimeout(() => {
           firstCard.classList.remove('flipped');
           secondCard.classList.remove('flipped');
-          firstCard.querySelector('img').style.display = 'none';
+          firstCard.querySelector('img').style.display = 'none'; //modifs css
           firstCard.querySelector('.back').style.display = 'block';
           secondCard.querySelector('img').style.display = 'none';
           secondCard.querySelector('.back').style.display = 'block';
@@ -74,13 +74,13 @@ function checkGameOver() {
   }
 
 
-  document.querySelectorAll('.category-filter').forEach(button => {
+  document.querySelectorAll('.category-filter').forEach(button => { //fonction pour les filtres
     button.addEventListener('click', (e) => {
       const category = e.target.getAttribute('data-category');
       const allCards = document.querySelectorAll('.card');
       
       
-      resetGame();
+      resetGame(); //Recommencer jeu quand on clique
 
       
       allCards.forEach(card => {
@@ -93,13 +93,13 @@ function checkGameOver() {
     });
   });
 
-  document.getElementById('showAll').addEventListener('click', () => {
+  document.getElementById('showAll').addEventListener('click', () => { //Filtre "montrer tout"
     const allCards = document.querySelectorAll('.card');
     allCards.forEach(card => {
       card.style.display = 'block'; 
     });
 
-    resetGame();
+    resetGame(); //Recommencer jeu quand on clique
   });
 
   shuffleCards();
